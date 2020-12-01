@@ -6,8 +6,22 @@
 
 </head>
 <body>
-    <div id="film">
+    <div>
+        <form>
+            <label>entrer votre nom de jeu</label>
+            <input type="text" name="name" id="name" required></br>
+            <label for="plateforme">choisissez une plateforme de jeu</label>
+            <select name="plateforme">
+                <option value="PC">pc</option>
+                <option value="PS">playstation</option>
+            </select>
+        </form>
+
+    </div>
+    <div id="pc">
         <button onclick="jeuPc();">montrer les jeus PC</button></br>
+    </div>
+    <div id="ps">
         <button onclick=""jeuPs();">montrer les jeu Playstation</button>
     </div>
 </body>
