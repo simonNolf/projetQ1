@@ -1,0 +1,4 @@
+le site consistera a savoir quels jeux on aime et quel jeu on aime pas. 
+Un tableau de différents jeux vidéos sera donné en paramètre (et converti en tableau). 
+L'utilisateur devra cliquer sur un boutton pour voir le tableau, et sur un autre, si il le désire trié.
+il aura la possibilité de mettre ces lignes en vert ou en rouge en fonction de ses préférences.
