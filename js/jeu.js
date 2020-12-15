@@ -3,13 +3,30 @@ let jeux_pc = [];
 let jeux_ps = [];
 let nombre = 0;
 
+function dynamicSort(tab) {
+    /**
+     * @param {array}
+     * @return {array} retourne l'array trié sur base de la clé demandée
+     */
+    let sortOrder = 1;
+    if(tab[0] === "-") {
+        sortOrder = -1;
+        tab = tab.substr(1);
+    }
+    return function (a,b) {
+        let result = (a[tab] < b[tab]) ? -1 : (a[tab] > b[tab]) ? 1 : 0;
+        return result * sortOrder;
+    }
+}
 
 function jeuPc() {
-
+    jeux_pc.sort(dynamicSort("nom"));
     let tabpc = "";
     tabpc += "<table id ='pc'><tr id='nom'><td>nom</td><td>type</td><td>appreciation</td>";
     for (let i in jeux_pc) {
-        tabpc += "<tr class=" + jeux_pc[i].nom + "><td>" + jeux_pc[i].nom + "</td><td>" + jeux_pc[i].type + "</td><td><button id=" + jeux_pc[i].nom + " value = 'like' onclick='recupId(this)'>aime</button>"
+        tabpc += "<tr class=" + jeux_pc[i].nom + "><td>" + jeux_pc[i].nom + "</td><td>"
+            + jeux_pc[i].type + "</td><td><button id=" + jeux_pc[i].nom
+            + " value = 'like' onclick='recupId(this)'>aime</button>"
             + "<button id=" + jeux_pc[i].nom + " value = 'dislike' onclick='recupId(this)' >aime pas</button></td>"
             + "</tr>";
     }
@@ -22,6 +39,7 @@ function jeuPs() {
      * constuit le tableau de manière dynamique des jeux PS encodés
 
      **/
+    jeux_ps.sort(dynamicSort("nom"));
     let tabps = "";
     tabps += "<table id ='ps'><tr id='nom'><td>nom</td><td>type</td><td>appreciation</td>";
     for (let i in jeux_ps) {
