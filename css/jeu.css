@@ -1,0 +1,24 @@
+th, td {
+    text-transform: capitalize;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+section {
+    padding: 10px;
+}
+
+body {
+    margin: 0;
+}
+.ok{
+    background-color: #73FF3E;
+}
+.non{
+    background-color: #FF0202;
+}

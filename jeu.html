@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <head>
+    <title>jeux</title>
     <meta charset="UTF-8">
     <script src="js/jeu.js"></script>
     <link rel="stylesheet" href="css/jeu.css">
-
 </head>
-<body>
+<body onload="init_page()">
     <div>
-        <form>
-            <label>entrer votre nom de jeu</label>
-            <input type="text" name="name" id="name" required></br>
-            <label for="plateforme">choisissez une plateforme de jeu</label>
-            <select name="plateforme">
-                <option value="PC">pc</option>
-                <option value="PS">playstation</option>
-            </select>
+        <form name="frm" action=# id="formulaire" >
+            <fieldset>
+                <label for=nm >Nom<em>*</em></label>
+                <input id=nm name=nm type=text required></br>
+                <label>sélectionner votre plateforme de jeu</label>
+                <select id=plateforme >choisissez votre plateforme<em>*</em>
+                    <option value=PC>pc</option>
+                    <option value="PS">playstation</option>
+                </select></br>
+                <label for=type> type de jeu*</label>
+                <input id="type" required>
+                <hr>
+                <input type=submit>
+                <input type=reset>
+            </fieldset>
         </form>
+
 
     </div>
     <div id="pc">
-        <button onclick="jeuPc();">montrer les jeus PC</button></br>
+        <button onclick="jeuPc();">montrer les jeux PC</button></br>
     </div>
     <div id="ps">
-        <button onclick=""jeuPs();">montrer les jeu Playstation</button>
+        <button onclick="jeuPs();">montrer les jeux Playstation</button>
     </div>
 </body>
