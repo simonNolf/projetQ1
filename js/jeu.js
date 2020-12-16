@@ -30,24 +30,23 @@ function jeuPc() {
             + "<button id=" + jeux_pc[i].nom + " value = 'dislike' onclick='recupId(this)' >aime pas</button></td>"
             + "</tr>";
     }
-    tabpc += "</table>";
+    tabpc += "</table></br><button onclick=\"jeuPc();\">montrer les jeux PC</button>";
     document.getElementById('pc').innerHTML = tabpc;
 }
 
 function jeuPs() {
     /**
      * constuit le tableau de manière dynamique des jeux PS encodés
-
      **/
     jeux_ps.sort(dynamicSort("nom"));
     let tabps = "";
     tabps += "<table id ='ps'><tr id='nom'><td>nom</td><td>type</td><td>appreciation</td>";
     for (let i in jeux_ps) {
-        tabps += "<tr class=" + jeux_ps[i].nom + "><td>" + jeux_ps[i].nom + "</td><td>" + jeux_ps[i].type + "</td><td><button id=" + jeux_ps[i].nom + " value = 'like' onclick='recupId(this)'>aime</button>"
-            + "<button id=" + jeux_ps[i].nom + " value = 'dislike' onclick='recupId(this)' >aime pas</button></td>"
+        tabps += "<tr class=" + jeux_ps[i].nom + "ps" + "><td>" + jeux_ps[i].nom + "</td><td>" + jeux_ps[i].type + "</td><td><button id=" + jeux_ps[i].nom + "ps" + " value = 'like' onclick='recupId(this)'>aime</button>"
+            + "<button id=" + jeux_ps[i].nom + "ps" + " value = 'dislike' onclick='recupId(this)' >aime pas</button></td>"
             + "</tr>";
     }
-    tabps += "</table>";
+    tabps += "</table></br><button onclick=\"jeuPs();\">montrer les jeux Playstation</button>";
     document.getElementById('ps').innerHTML = tabps;
 
 }
