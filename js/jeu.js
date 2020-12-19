@@ -83,6 +83,7 @@ function getform(event) {
         jeux_ps.push(y);
         nombre += 1;
     }
+    document.getElementById("compt").innerHTML = "vous avez incrit "+ nombre+ " données dans le formulaire";
     return false;
 }
 
